@@ -1,10 +1,11 @@
-package entidades.modelos;
+package modelos;
 
-import entidades.interfaces.Consulta;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Date;
 import java.util.Map;
+
+import entidades.interfaces.Consulta;
 
 public class ConsultaServico extends UnicastRemoteObject implements Consulta {
     private final ConsultaBase consulta;

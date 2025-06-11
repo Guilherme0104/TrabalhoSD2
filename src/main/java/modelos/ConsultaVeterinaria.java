@@ -1,4 +1,4 @@
-package entidades.modelos;
+package modelos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import entidades.dtos.ConsultaRegistro;
 
 public class ConsultaVeterinaria extends ConsultaBase {
-  private ArrayList<String> veterinarios;
+  private final ArrayList<String> veterinarios;
 
   public ConsultaVeterinaria() {
     super();
