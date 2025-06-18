@@ -3,7 +3,8 @@ package modelos;
 import java.util.ArrayList;
 import java.util.List;
 
-import entidades.dtos.ConsultaRegistro;
+import entidades.controladores.ConsultaRegistro;
+
 
 public class ConsultaVeterinaria extends ConsultaBase {
   private final ArrayList<String> veterinarios;

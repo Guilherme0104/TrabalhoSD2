@@ -10,6 +10,6 @@ public interface IProtocoloServidor extends Remote  {
      * @return Array de bytes contendo a mensagem de resposta.
      * @throws RemoteException
      */
-    Byte[] processarRequisicao(Byte[] req) throws RemoteException;
+    byte[] processarRequisicao(byte[] req) throws RemoteException;
 
 }

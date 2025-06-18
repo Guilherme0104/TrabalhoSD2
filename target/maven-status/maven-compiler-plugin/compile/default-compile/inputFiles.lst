@@ -1,0 +1,14 @@
+/workspaces/TrabalhoSD2/src/main/java/Cliente/ConsultaProxy.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/animais/Animal.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/animais/Cachorro.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/animais/Gato.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/animais/Papagaio.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/controladores/Estoque.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/interfaces/Consulta.java
+/workspaces/TrabalhoSD2/src/main/java/entidades/interfaces/IProtocoloServidor.java
+/workspaces/TrabalhoSD2/src/main/java/modelos/ConsultaBase.java
+/workspaces/TrabalhoSD2/src/main/java/modelos/ConsultaPetShop.java
+/workspaces/TrabalhoSD2/src/main/java/modelos/ConsultaServico.java
+/workspaces/TrabalhoSD2/src/main/java/modelos/ConsultaVeterinaria.java
+/workspaces/TrabalhoSD2/src/main/java/servidor/Mensagem.java
+/workspaces/TrabalhoSD2/src/main/java/servidor/ServidorProtocolo.java

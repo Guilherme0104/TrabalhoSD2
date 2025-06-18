@@ -4,13 +4,11 @@ import com.google.gson.Gson;
 
 import entidades.interfaces.IProtocoloServidor;
 import modelos.ConsultaVeterinaria;
-import servidor.Mensagem;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.Map;
 
-import javax.management.MBeanServerDelegateMBean;
 
 
 public class ServidorProtocolo extends UnicastRemoteObject implements IProtocoloServidor {
@@ -24,10 +22,10 @@ public class ServidorProtocolo extends UnicastRemoteObject implements IProtocolo
     }
 
     @Override
-    public Byte[] processarRequisicao(Byte[] requisicao) throws RemoteException {
+    public byte[] processarRequisicao(byte[] requisicao) throws RemoteException {
 
          //desempacota
-        String jsonRequisicao = new String(requisicao);
+        String jsonRequisicao = Arrays.toString(requisicao);
         Mensagem requisicaoMsg = gson.fromJson(jsonRequisicao, Mensagem.class);
 
         Object resposta = null;
@@ -67,7 +65,7 @@ public class ServidorProtocolo extends UnicastRemoteObject implements IProtocolo
         if(erro != null) {
             respostaMsg.setArguments(gson.toJson(erro)); // Envia a mensagem de erro
         } else if (resposta != null) {
-            respostaMsg.setArguments(gson.toJson(resultado)); // Converte o resultado para JSON
+            respostaMsg.setArguments(gson.toJson(resposta)); // Converte o resultado para JSON
         }
 
         String jsonResposta = gson.toJson(respostaMsg);
