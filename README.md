@@ -52,12 +52,17 @@ A comunicação foi implementada via RMI, **sem uso direto de sockets**. Para si
 
         requestId
 
-### 🧠 Lógica do Servidor
+---
+
+## 🧠 Lógica do Servidor
 
 A classe ServidorProtocolo interpreta a requisição recebida, identifica o método a ser invocado, executa-o localmente e retorna a resposta empacotada em JSON.
 
 Para contornar o problema de serialização de classes abstratas com Gson (Animal), foi criado um adaptador personalizado AnimalAdapter que lê o campo "type" e instancia a subclasse correta (Cachorro, Gato, Papagaio).
-### 💻 Interface do Cliente
+
+---
+
+## 💻 Interface do Cliente
 
 O cliente possui um menu interativo no terminal com as seguintes opções:
 
