@@ -41,3 +41,44 @@ A comunicação foi implementada via RMI, **sem uso direto de sockets**. Para si
 - Uma interface remota `IProtocoloServidor`, com o método:
   ```java
   byte[] processarRequisicao(byte[] requisicao) throws RemoteException;
+
+    Uma classe Mensagem, representando requisições e respostas com os seguintes campos:
+
+        messageType (0 = request, 1 = reply)
+
+        methodId
+
+        arguments (JSON)
+
+        requestId
+
+### 🧠 Lógica do Servidor
+
+A classe ServidorProtocolo interpreta a requisição recebida, identifica o método a ser invocado, executa-o localmente e retorna a resposta empacotada em JSON.
+
+Para contornar o problema de serialização de classes abstratas com Gson (Animal), foi criado um adaptador personalizado AnimalAdapter que lê o campo "type" e instancia a subclasse correta (Cachorro, Gato, Papagaio).
+### 💻 Interface do Cliente
+
+O cliente possui um menu interativo no terminal com as seguintes opções:
+
+1. Realizar consulta
+
+2. Cancelar consulta
+
+3. Ver medicamentos por animal
+
+4. Aplicar medicamento
+
+5. Adicionar medicamento
+
+6. Adicionar animal
+
+7. Remover animal
+
+8. Listar animais
+
+9. Listar agendamentos
+
+0. Sair
+
+As operações são empacotadas como Mensagem, enviadas via RMI para o servidor, e exibem as respostas decodificadas ao usuário.
