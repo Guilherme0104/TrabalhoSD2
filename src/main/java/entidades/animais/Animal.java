@@ -1,6 +1,8 @@
 package entidades.animais;
 
-public abstract class Animal {
+import java.io.Serializable;
+
+public abstract class Animal implements Serializable {
   private String nome;
   private int idade;
   private String raca;

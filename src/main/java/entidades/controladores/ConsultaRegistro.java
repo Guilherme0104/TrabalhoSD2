@@ -3,18 +3,20 @@ package entidades.controladores;
 import java.io.Serializable;
 import java.util.Date;
 
-public class ConsultaRegistro implements Serializable {
-    private String animal;
-    private Date data;
-    private String observacao;
+import entidades.animais.Animal;
 
-    public ConsultaRegistro(String animal, Date data, String observacao) {
+public class ConsultaRegistro implements Serializable {
+    private Animal animal;
+    private Date data;
+    private Veterinario veterinario;
+
+    public ConsultaRegistro(Animal animal, Date data, Veterinario veterinario) {
         this.animal = animal;
         this.data = data;
-        this.observacao = observacao;
+        this.veterinario = veterinario;
     }
 
-    public String getAnimal() {
+    public Animal getAnimal() {
         return animal;
     }
 
@@ -22,12 +24,12 @@ public class ConsultaRegistro implements Serializable {
         return data;
     }
 
-    public String getObservacao() {
-        return observacao;
+    public Veterinario getVeterinario() {
+        return veterinario;
     }
 
     @Override
     public String toString() {
-        return "Animal: " + animal + ", Data: " + data + ", Obs: " + observacao;
+        return "Animal: " + animal + ", Data: " + data + ", Veterinario: " + veterinario;
     }
 }

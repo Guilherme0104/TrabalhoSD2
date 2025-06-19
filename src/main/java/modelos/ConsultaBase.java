@@ -1,16 +1,16 @@
 package modelos;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Map;
 
 import entidades.animais.Animal;
+import entidades.controladores.Agendamento;
 import entidades.controladores.Estoque;
 import entidades.interfaces.Consulta;
 
 public abstract class ConsultaBase implements Consulta {
     protected Estoque estoque;
-    protected ArrayList<Date> agendamentos;
+    protected ArrayList<Agendamento> agendamentos;
     private ArrayList<Animal> animais;
 
     public ConsultaBase() {
@@ -34,8 +34,8 @@ public abstract class ConsultaBase implements Consulta {
     }
     
     @Override
-    public void realizarConsulta(Date data) {
-        agendamentos.add(data);
+    public void realizarConsulta(Agendamento agendamento) {
+        agendamentos.add(agendamento);
     }
 
     public void aplicarMedicamento(String animal, String medicamento, int quantidade) {
@@ -60,5 +60,9 @@ public abstract class ConsultaBase implements Consulta {
         } else {
         throw new IllegalArgumentException("Animal " + id + " nao encontrado.");
         }
+    }
+
+    public ArrayList<Agendamento> getAgendamentos() {
+        return agendamentos;
     }
 }
