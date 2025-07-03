@@ -8,7 +8,7 @@ import entidades.controladores.ConsultaRegistro;
 
 
 public class ConsultaVeterinaria extends ConsultaBase {
-  private final ArrayList<String> veterinarios;
+  private ArrayList<String> veterinarios;
 
   public ConsultaVeterinaria() {
     super();

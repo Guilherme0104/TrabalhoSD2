@@ -11,7 +11,7 @@ import entidades.interfaces.Consulta;
 public abstract class ConsultaBase implements Consulta {
     protected Estoque estoque;
     protected ArrayList<Agendamento> agendamentos;
-    private ArrayList<Animal> animais;
+    protected ArrayList<Animal> animais;
 
     public ConsultaBase() {
         this.estoque = new Estoque();
