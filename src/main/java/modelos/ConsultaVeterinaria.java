@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entidades.controladores.Agendamento;
-import entidades.controladores.ConsultaRegistro;
 
 
 public class ConsultaVeterinaria extends ConsultaBase {
@@ -15,11 +14,11 @@ public class ConsultaVeterinaria extends ConsultaBase {
     this.veterinarios = new ArrayList<>();
   }
 
-  public ConsultaVeterinaria(List<ConsultaRegistro> historico) {
+  public ConsultaVeterinaria(List<Agendamento> historico) {
     super();
     this.veterinarios = new ArrayList<>();
     if (historico != null && !historico.isEmpty()) {
-      for (ConsultaRegistro registro : historico) {
+      for (Agendamento registro : historico) {
           this.agendamentos.add(new Agendamento(registro.getData(), registro.getAnimal(), registro.getVeterinario()));
       }
     }
