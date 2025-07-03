@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entidades.controladores.Agendamento;
+import entidades.controladores.Veterinario;
 
 
 public class ConsultaVeterinaria extends ConsultaBase {
-  private ArrayList<String> veterinarios;
+  private ArrayList<Veterinario> veterinarios;
 
   public ConsultaVeterinaria() {
     super();
@@ -24,11 +25,11 @@ public class ConsultaVeterinaria extends ConsultaBase {
     }
   }
 
-  public ArrayList<String> getVeterinarios() {
+  public ArrayList<Veterinario> getVeterinarios() {
     return veterinarios;
   }
 
-  public void adicionarVeterinario(String veterinario) {
+  public void adicionarVeterinario(Veterinario veterinario) {
     veterinarios.add(veterinario);
   }
 

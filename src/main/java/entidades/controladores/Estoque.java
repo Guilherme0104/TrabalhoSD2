@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class Estoque {
     private Map<String, Map<String, Integer>> medicamentosPorAnimal;
+    
 
     public Estoque() {
         this.medicamentosPorAnimal = new HashMap<>();
